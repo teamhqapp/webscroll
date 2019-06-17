@@ -1,0 +1,9 @@
+@mixin tables_border_collapse($p: "") {
+  .#{$p}border-collapse { border-collapse: collapse; }
+  .#{$p}border-separate	{ border-collapse: separate; }
+
+}
+@mixin tables_table_layout($p: "") {
+  .#{$p}table-auto	{ table-layout: auto; }
+  .#{$p}table-fixed	{ table-layout: fixed;  }
+}

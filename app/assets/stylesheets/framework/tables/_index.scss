@@ -1,0 +1,11 @@
+@import "responsive_mixins";
+
+// NON-MEDIA definitions
+@include tables_border_collapse;
+@include tables_table_layout;
+
+// RUN PREFIX TRANSFORMATION ON MIXINS WITHIN @MEDIA CONTEXT
+@include prefix_responsive {
+  @include tables_border_collapse(#{$_breakpoint_prefix} );
+  @include tables_table_layout(#{$_breakpoint_prefix} );
+}

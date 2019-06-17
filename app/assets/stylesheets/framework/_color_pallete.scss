@@ -1,0 +1,88 @@
+/* Pallete 15 */
+$color_pallete: "primary", "neutral", "accent-teal", "accent-red", "accent-yellow";
+$color_pallete_weights: "100", "200", "300", "400", "500", "600", "700", "800", "900";
+
+/** Pallete Colors */
+$color_primary: hsl(205, 67%, 45%);
+$color_neutral: hsl(210, 22%, 49%);
+$color_accent_teal: hsl(168, 78%, 41%);
+$color_accent_red: hsl(360, 67%, 44%);
+$color_accent_yellow: hsl(42, 78%, 60%);
+
+/** simple name definitions */
+$color_blue: $color_primary;
+$color_grey: $color_neutral;
+$color_red: $color_accent_red;
+$color_teal: $color_accent_teal;
+$color_yellow: $color_accent_yellow;
+$color_green: hsl(166, 64%, 49%);
+$color_black: #000;
+$color_white: #fff;
+
+
+$color_definitions: (
+  /** primary **/
+  "primary_100": hsl(205, 79%, 92%),
+  "primary_200": hsl(205, 97%, 85%),
+  "primary_300": hsl(205, 84%, 74%),
+  "primary_400": hsl(205, 74%, 65%),
+  "primary_500": $color_primary,
+  "primary_600": hsl(205, 76%, 39%),
+  "primary_700": hsl(205, 82%, 33%),
+  "primary_800": hsl(205, 87%, 29%),
+  "primary_900": hsl(205, 100%, 21%),
+
+  /** neutral **/
+  "neutral_100": hsl(210, 36%, 96%),
+  "neutral_200": hsl(212, 33%, 89%),
+  "neutral_300": hsl(210, 31%, 80%),
+  "neutral_400": hsl(211, 27%, 70%),
+  "neutral_500": $color_neutral,
+  "neutral_600": hsl(209, 28%, 39%),
+  "neutral_700": hsl(209, 34%, 30%),
+  "neutral_800": hsl(211, 39%, 23%),
+  "neutral_900": hsl(209, 61%, 16%),
+
+  /** accent_teal **/
+  "accent-teal_100": hsl(165, 67%, 96%),
+  "accent-teal_200": hsl(163, 75%, 87%),
+  "accent-teal_300": hsl(162, 73%, 74%),
+  "accent-teal_400": hsl(164, 70%, 63%),
+  "accent-teal_500": $color_accent_teal,
+  "accent-teal_600": hsl(170, 91%, 32%),
+  "accent-teal_700": hsl(172, 94%, 26%),
+  "accent-teal_800": hsl(172, 98%, 20%),
+  "accent-teal_900": hsl(176, 100%, 13%),
+
+  /** accent_red **/
+  "accent-red_100": hsl(360, 100%, 97%),
+  "accent-red_200": hsl(360, 82%, 89%),
+  "accent-red_300": hsl(360, 77%, 78%),
+  "accent-red_400": hsl(360, 71%, 66%),
+  "accent-red_500": $color_accent_red,
+  "accent-red_600": hsl(360, 72%, 38%),
+  "accent-red_700": hsl(360, 79%, 32%),
+  "accent-red_800": hsl(360, 85%, 25%),
+  "accent-red_900": hsl(360, 92%, 20%),
+
+  /** accent_yellow **/
+  "accent-yellow_100": hsl(45, 100%, 96%),
+  "accent-yellow_200": hsl(45, 90%, 88%),
+  "accent-yellow_300": hsl(45, 86%, 81%),
+  "accent-yellow_400": hsl(43, 90%, 76%),
+  "accent-yellow_500": $color_accent_yellow,
+  "accent-yellow_600": hsl(42, 63%, 48%),
+  "accent-yellow_700": hsl(43, 72%, 37%),
+  "accent-yellow_800": hsl(43, 77%, 27%),
+  "accent-yellow_900": hsl(43, 86%, 17%),
+);
+
+/** neutral **/
+
+//
+//
+
+//
+//
+
+//

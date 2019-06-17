@@ -1,0 +1,17 @@
+@import "responsive_mixins";
+
+// NON-MEDIA definitions
+@include background_display;
+@include background_position;
+@include background_repeat;
+@include background_size;
+@include background_color;
+
+// RUN PREFIX TRANSFORMATION ON MIXINS WITHIN @MEDIA CONTEXT
+@include prefix_responsive {  
+  @include background_display(#{$_breakpoint_prefix} );
+  @include background_position(#{$_breakpoint_prefix} );
+  @include background_repeat(#{$_breakpoint_prefix} );
+  @include background_size(#{$_breakpoint_prefix} );
+  @include background_color(#{$_breakpoint_prefix} );
+}

@@ -1,0 +1,23 @@
+@mixin typography_vertical_align($p: "") {
+  .#{$p}align-baseline { vertical-align: baseline}
+  .#{$p}align-top { vertical-align: top}
+  .#{$p}align-middle { vertical-align: middle}
+  .#{$p}align-bottom { vertical-align: bottom}
+  .#{$p}align-text-top { vertical-align: text-top}
+  .#{$p}align-text-bottom { vertical-align: text-bottom}
+}
+
+@mixin typography_whitespace($p: "") {
+  .#{$p}whitespace-normal { white-space: normal}
+  .#{$p}whitespace-no-wrap { white-space: nowrap}
+  .#{$p}whitespace-pre { white-space: pre}
+  .#{$p}whitespace-pre-line { white-space: pre-line}
+  .#{$p}whitespace-pre-wrap { white-space: pre-wrap}
+}
+
+@mixin typography_word_break($p: "") {
+  .#{$p}break-normal { overflow-wrap: normal; word-break: normal }
+  .#{$p}break-words { overflow-wrap: break-word }
+  .#{$p}break-all { word-break: break-all }
+  .#{$p}truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+}

@@ -1,0 +1,24 @@
+@mixin spacing_padding($p: "") {
+
+  @each $name, $size in $spacing_sizes {
+    @include spacing_padding_full($p, $name, $size);
+    @include spacing_padding_xy($p, $name, $size);
+    @include spacing_padding_directions($p, $name, $size);
+
+  }
+}
+
+@mixin spacing_padding_full($p: "", $size_name: "", $size: "") {
+  .#{$p}p-#{$size_name} { padding: $size; }
+}
+
+@mixin spacing_padding_directions($p: "", $size_name: "", $size: "") {
+  @each $short_name, $long_name in $spacing_directions {
+    .#{$p}p#{$short_name}-#{$size_name} { padding-#{$long_name}: $size; }
+  }
+}
+
+@mixin spacing_padding_xy($p: "", $size_name: "", $size: "") {
+  .#{$p}py-#{$size_name} { padding-top: $size; padding-bottom: $size; }
+  .#{$p}px-#{$size_name} { padding-left: $size; padding-right: $size; }
+}

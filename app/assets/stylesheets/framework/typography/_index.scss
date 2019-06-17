@@ -1,0 +1,29 @@
+@import "font_responsive_mixins";
+@import "text_responsive_mixins";
+@import "alignment_responsive_mixins";
+
+// NON-MEDIA definitions
+@include typography_font_family;
+@include typography_font_size;
+@include typography_font_smoothing;
+@include typography_font_style;
+@include typography_font_weight;
+@include typography_letter_spacing;
+@include typography_text_color;
+@include typography_vertical_align;
+@include typography_whitespace;
+@include typography_word_break;
+
+// RUN PREFIX TRANSFORMATION ON MIXINS WITHIN @MEDIA CONTEXT
+@include prefix_responsive {
+  @include typography_font_family(#{$_breakpoint_prefix} );
+  @include typography_font_size(#{$_breakpoint_prefix} );
+  @include typography_font_smoothing(#{$_breakpoint_prefix} );
+  @include typography_font_style(#{$_breakpoint_prefix} );
+  @include typography_font_weight(#{$_breakpoint_prefix} );
+  @include typography_letter_spacing(#{$_breakpoint_prefix} );
+  @include typography_vertical_align(#{$_breakpoint_prefix} );
+  @include typography_whitespace(#{$_breakpoint_prefix} );
+  @include typography_word_break(#{$_breakpoint_prefix} );
+
+}

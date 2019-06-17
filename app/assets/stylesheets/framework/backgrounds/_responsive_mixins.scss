@@ -1,0 +1,57 @@
+@mixin background_display($p: "") {
+  .#{$p}bg-fixed { background-attachment: fixed}
+  .#{$p}bg-local { background-attachment: local}
+  .#{$p}bg-scroll { background-attachment: scroll}
+}
+
+@mixin background_position($p: "") {
+  .#{$p}bg-bottom { background-position: bottom}
+  .#{$p}bg-center { background-position: center}
+  .#{$p}bg-left { background-position: left}
+  .#{$p}bg-left-bottom { background-position: left bottom}
+  .#{$p}bg-left-top { background-position: left top}
+  .#{$p}bg-right { background-position: right}
+  .#{$p}bg-right-bottom { background-position: right bottom}
+  .#{$p}bg-right-top { background-position: right top}
+  .#{$p}bg-top { background-position: top}
+}
+
+@mixin background_repeat($p: "") {
+  .#{$p}bg-repeat { background-repeat: repeat}
+  .#{$p}bg-no-repeat { background-repeat: no-repeat}
+  .#{$p}bg-repeat-x { background-repeat: repeat-x}
+  .#{$p}bg-repeat-y { background-repeat: repeat-y}
+  .#{$p}bg-repeat-round { background-repeat: round}
+  .#{$p}bg-repeat-space { background-repeat: space}
+}
+
+@mixin background_size($p: "") {
+  .#{$p}bg-auto { background-size: auto}
+  .#{$p}bg-cover { background-size: cover}
+  .#{$p}bg-contain { background-size: contain}
+}
+
+@mixin background_color($p: "") {
+  .#{$p}bg-transparent { background-color: transparent; }
+  .#{$p}hover\:bg-transparent:hover { background-color: transparent; }
+  .#{$p}focus\:bg-transparent:focus { background-color: transparent; }
+
+  .#{$p}bg-black { background-color: $color_black; }
+  .#{$p}hover\:bg-black:hover { background-color: $color_black; }
+  .#{$p}focus\:bg-black:focus { background-color: $color_black; }
+
+  .#{$p}bg-white { background-color: $color_white; }
+  .#{$p}hover\:bg-white:hover { background-color: $color_white; }
+  .#{$p}focus\:bg-white:focus { background-color: $color_white; }
+
+
+  @each $color in $color_pallete {
+    @each $weight in $color_pallete_weights {
+
+      .#{$p}bg-#{$color}-#{$weight} {  background-color: map-get($color_definitions, "#{$color}_#{$weight}"); }
+      .#{$p}hover\:bg-#{$color}-#{$weight}:hover {  background-color: map-get($color_definitions, "#{$color}_#{$weight}"); }
+      .#{$p}focus\:bt-#{$color}-#{$weight}:focus {  background-color: map-get($color_definitions, "#{$color}_#{$weight}"); }
+    }
+  }
+
+}

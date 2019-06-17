@@ -1,0 +1,29 @@
+@mixin flexbox_align_items($p: "") {
+  .#{$p}items-start { align-items: flex-start}
+  .#{$p}items-end { align-items: flex-end}
+  .#{$p}items-center { align-items: center}
+  .#{$p}items-baseline { align-items: baseline}
+  .#{$p}items-stretch { align-items: stretch}
+}
+@mixin flexbox_align_content($p: "") {
+  .#{$p}content-center { align-content: center}
+  .#{$p}content-start { align-content: flex-start}
+  .#{$p}content-end { align-content: flex-end}
+  .#{$p}content-between { align-content: space-between}
+  .#{$p}content-around { align-content: space-around}
+}
+
+@mixin flexbox_align_self($p: "") {
+  .#{$p}self-auto { align-self: auto}
+  .#{$p}self-start { align-self: flex-start}
+  .#{$p}self-end { align-self: flex-end}
+  .#{$p}self-center { align-self: center}
+  .#{$p}self-stretch { align-self: stretch}
+}
+@mixin flexbox_justify_content($p: "") {
+  .#{$p}justify-start { justify-content: flex-start}
+  .#{$p}justify-end { justify-content: flex-end}
+  .#{$p}justify-center { justify-content: center}
+  .#{$p}justify-between { justify-content: space-between}
+  .#{$p}justify-around { justify-content: space-around}
+}

@@ -1,0 +1,9 @@
+@mixin flexbox_order($p: "") {
+
+  .#{$p}order-none { order: 0 }
+
+  @for $i from 1 through 12 {
+    .#{$p}order-#{$i} { order: $i }
+  }
+  
+}

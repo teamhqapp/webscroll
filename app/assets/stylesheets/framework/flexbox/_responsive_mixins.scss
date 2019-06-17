@@ -1,0 +1,23 @@
+@mixin flexbox_direction($p: "") {
+  .#{$p}flex-row { flex-direction: row}
+  .#{$p}flex-row-reverse { flex-direction: row-reverse}
+  .#{$p}flex-col { flex-direction: column}
+  .#{$p}flex-col-reverse { flex-direction: column-reverse}
+}
+@mixin flexbox_wrap($p: "") {
+  .#{$p}flex-wrap { flex-wrap: wrap}
+  .#{$p}flex-wrap-reverse { flex-wrap: wrap-reverse}
+  .#{$p}flex-no-wrap { flex-wrap: nowrap}
+}
+@mixin flexbox_flex($p: "") {
+  .#{$p}flex-1 { flex: 1 1 0%}
+  .#{$p}flex-auto { flex: 1 1 auto}
+  .#{$p}flex-initial { flex: 0 1 auto}
+  .#{$p}flex-none { flex: none}
+}
+@mixin flexbox_flex_grow_shrink($p: "") {
+  .#{$p}flex-grow-0 { flex-grow: 0}
+  .#{$p}flex-grow { flex-grow: 1}
+  .#{$p}flex-shrink-0 { flex-shrink: 0}
+  .#{$p}flex-shrink { flex-shrink: 1}
+}

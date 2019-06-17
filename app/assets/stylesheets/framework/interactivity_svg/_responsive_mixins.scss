@@ -1,0 +1,43 @@
+@mixin interactivity_appearance($p: "") {
+  .#{$p}appearance-none	{appearance: none;}
+}
+
+@mixin interactivity_cursor($p: "") {
+  .#{$p}cursor-auto	{cursor: auto;}
+  .#{$p}cursor-default	{cursor: default;}
+  .#{$p}cursor-pointer	{cursor: pointer;}
+  .#{$p}cursor-wait	{cursor: wait;}
+  .#{$p}cursor-text	{cursor: text;}
+  .#{$p}cursor-move	{cursor: move;}
+  .#{$p}cursor-not-allowed	{cursor: not-allowed;}
+}
+
+@mixin interactivity_outline($p: "") {
+  .#{$p}outline-none	{outline: 0;}
+}
+
+@mixin interactivity_pointer_events($p: "") {
+  .#{$p}pointer-events-none	{pointer-events: none;}
+  .#{$p}pointer-events-auto	{pointer-events: auto;}
+}
+@mixin interactivity_resize($p: "") {
+  .#{$p}resize-none	{resize: none;}
+  .#{$p}resize	{resize: both;}
+  .#{$p}resize-y	{resize: vertical;}
+  .#{$p}resize-x	{resize: horizontal;}
+}
+
+@mixin interactivity_user_select($p: "") {
+  .#{$p}select-none {	user-select: none;}
+  .#{$p}select-text	{ user-select: text;}
+  .#{$p}select-all	{ user-select: all;}
+  .#{$p}select-auto	{ user-select: auto; }
+}
+
+@mixin svg_fill($p: "") {
+  .#{$p}fill-current	{fill: currentColor;}
+}
+
+@mixin svg_stroke($p: "") {
+  .#{$p}stroke-current	{stroke: currentColor;}
+}

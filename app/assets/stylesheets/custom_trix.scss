@@ -1,0 +1,10 @@
+trix-editor {
+  min-height: 400px;
+
+  ul:not(.browser-default) {
+
+    &>li { list-style-type: disc; margin-left: 3rem; line-height: 2.5rem; }
+
+  }
+
+}

@@ -1,0 +1,24 @@
+@mixin border_color($p: "") {
+  .#{$p}border-transparent { border-color: transparent; }
+  .#{$p}hover\:border-transparent:hover { border-color: transparent; }
+  .#{$p}focus\:border-transparent:focus { border-color: transparent; }
+
+  .#{$p}bg-black { border-color: $color_black; }
+  .#{$p}hover\:border-black:hover { border-color: $color_black; }
+  .#{$p}focus\:border-black:focus { border-color: $color_black; }
+
+  .#{$p}border-white { border-color: $color_white; }
+  .#{$p}hover\:border-white:hover { border-color: $color_white; }
+  .#{$p}focus\:border-white:focus { border-color: $color_white; }
+
+
+  @each $color in $color_pallete {
+    @each $weight in $color_pallete_weights {
+
+      .#{$p}border-#{$color}-#{$weight} {  border-color: map-get($color_definitions, "#{$color}_#{$weight}"); }
+      .#{$p}hover\:border-#{$color}-#{$weight}:hover {  border-color: map-get($color_definitions, "#{$color}_#{$weight}"); }
+      .#{$p}focus\:border-#{$color}-#{$weight}:focus {  border-color: map-get($color_definitions, "#{$color}_#{$weight}"); }
+    }
+  }
+
+}

@@ -1,0 +1,86 @@
+/*** TYPOGRAPHY - RESPONSIVE MIXINS ***/
+@mixin typography_font_family($p: "") {
+  .#{$p}font-sans { font-family: $font_family_sans }
+  .#{$p}font-serif { font-family: $font_family_serif }
+  .#{$p}font-mono { font-family: $font_family_mono }
+}
+
+@mixin typography_font_size($p: "") {
+  .#{$p}text-xs { font-size: 0.75rem}
+  .#{$p}text-sm { font-size: 0.875rem}
+  .#{$p}text-base { font-size: 1rem}
+  .#{$p}text-lg { font-size: 1.125rem}
+  .#{$p}text-xl { font-size: 1.25rem}
+  .#{$p}text-2xl { font-size: 1.5rem}
+  .#{$p}text-3xl { font-size: 1.875rem}
+  .#{$p}text-4xl { font-size: 2.25rem}
+  .#{$p}text-5xl { font-size: 3rem}
+  .#{$p}text-6xl { font-size: 4rem}
+}
+
+@mixin typography_font_smoothing($p: "") {
+  .#{$p}antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale}
+  .#{$p}subpixel-antialiased { -webkit-font-smoothing: auto; -moz-osx-font-smoothing: auto}
+}
+
+@mixin typography_font_style($p: "") {
+  .#{$p}italic { font-style: italic}
+  .#{$p}not-italic { font-style: normal}
+}
+
+@mixin typography_font_weight($p: "") {
+  .#{$p}font-hairline { font-weight: 100}
+  .#{$p}font-thin { font-weight: 200}
+  .#{$p}font-light { font-weight: 300}
+  .#{$p}font-normal { font-weight: 400}
+  .#{$p}font-medium { font-weight: 500}
+  .#{$p}font-semibold { font-weight: 600}
+  .#{$p}font-bold { font-weight: 700}
+  .#{$p}font-extrabold { font-weight: 800}
+  .#{$p}font-black { font-weight: 900}
+  .#{$p}hover\:font-hairline:hover { font-weight: 100}
+  .#{$p}hover\:font-thin:hover { font-weight: 200}
+  .#{$p}hover\:font-light:hover { font-weight: 300}
+  .#{$p}hover\:font-normal:hover { font-weight: 400}
+  .#{$p}hover\:font-medium:hover { font-weight: 500}
+  .#{$p}hover\:font-semibold:hover { font-weight: 600}
+  .#{$p}hover\:font-bold:hover { font-weight: 700}
+  .#{$p}hover\:font-extrabold:hover { font-weight: 800}
+  .#{$p}hover\:font-black:hover { font-weight: 900}
+  .#{$p}focus\:font-hairline:focus { font-weight: 100}
+  .#{$p}focus\:font-thin:focus { font-weight: 200}
+  .#{$p}focus\:font-light:focus { font-weight: 300}
+  .#{$p}focus\:font-normal:focus { font-weight: 400}
+  .#{$p}focus\:font-medium:focus { font-weight: 500}
+  .#{$p}focus\:font-semibold:focus { font-weight: 600}
+  .#{$p}focus\:font-bold:focus { font-weight: 700}
+  .#{$p}focus\:font-extrabold:focus { font-weight: 800}
+  .#{$p}focus\:font-black:focus { font-weight: 900}
+}
+
+@mixin typography_letter_spacing($p: "") {
+  .#{$p}tracking-tighter { letter-spacing: -0.05em}
+  .#{$p}tracking-tight { letter-spacing: -0.025em}
+  .#{$p}tracking-normal { letter-spacing: 0}
+  .#{$p}tracking-wide { letter-spacing: 0.025em}
+  .#{$p}tracking-wider { letter-spacing: 0.05em}
+  .#{$p}tracking-widest { letter-spacing: 0.1em}
+}
+
+@mixin typography_line_height($p: "") {
+  .#{$p}leading-none { line-height: 1}
+  .#{$p}leading-tight { line-height: 1.25}
+  .#{$p}leading-snug { line-height: 1.375}
+  .#{$p}leading-normal { line-height: 1.5}
+  .#{$p}leading-relaxed { line-height: 1.625}
+  .#{$p}leading-loose { line-height: 2}
+}
+
+
+@mixin typography_list_style_position($p: "") {
+  .#{$p}list-inside { list-style-position: inside}
+  .#{$p}list-outside { list-style-position: outside}
+  .#{$p}list-none { list-style-type: none}
+  .#{$p}list-disc { list-style-type: disc}
+  .#{$p}list-decimal { list-style-type: decimal}
+}

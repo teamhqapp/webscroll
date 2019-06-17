@@ -1,0 +1,41 @@
+@mixin border_radius($p: "") {
+  // Default, no size definitions
+  @include border_radius_full($p, "", $border_default_radius);
+  @include border_radius_top($p, "", $border_default_radius);
+  @include border_radius_bottom($p, "", $border_default_radius);
+  @include border_radius_left_right($p, "", $border_default_radius);
+
+  // Loop thorugh sizes
+  @each $name, $size in $border_radius_sizes {
+    $name_with_dash: "-#{$name}";
+    @include border_radius_full($p, $name_with_dash, $size);
+    @include border_radius_top($p, $name_with_dash, $size);
+    @include border_radius_bottom($p, $name_with_dash, $size);
+    @include border_radius_left_right($p, $name_with_dash, $size);
+  }
+}
+
+@mixin border_radius_full($p: "", $size_name: "", $size: 0) {
+  .#{$p}rounded#{$size_name} { border-radius: $size }
+  .#{$p}hover\:rounded#{$size_name}:hover { border-radius: $size }
+  .#{$p}focus\:rounded#{$size_name}:focus { border-radius: $size }
+}
+
+@mixin border_radius_top($p: "", $size_name: "", $size: 0) {
+  .#{$p}rounded-t#{$size_name} { border-top-right-radius: $size; border-top-left-radius: $size;}
+  .#{$p}rounded-tr#{$size_name} { border-top-right-radius: $size; }
+  .#{$p}rounded-tl#{$size_name} { border-top-left-radius: $size; }
+  
+}
+
+@mixin border_radius_bottom($p: "", $size_name: "", $size: 0) {
+  .#{$p}rounded-b#{$size_name} { border-bottom-right-radius: $size; border-bottom-left-radius: $size;}
+  .#{$p}rounded-br#{$size_name} { border-bottom-right-radius: $size; }
+  .#{$p}rounded-bl#{$size_name} { border-bottom-left-radius: $size; }
+}
+
+
+@mixin border_radius_left_right($p: "", $size_name: "", $size: 0) {
+  .#{$p}rounded-l#{$size_name} { border-top-left-radius: $size; border-bottom-left-radius: $size;}
+  .#{$p}rounded-r#{$size_name} { border-top-right-radius: $size; border-bottom-right-radius: $size;}
+}

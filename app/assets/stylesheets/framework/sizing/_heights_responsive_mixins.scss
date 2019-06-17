@@ -1,0 +1,20 @@
+@mixin sizing_height($p: "") {
+  @each $name, $size in $height_fixed_sizes {
+    .#{$p}h-#{$name} { height: #{$size} }
+  }
+
+}
+
+
+@mixin sizing_min_height($p: "") {
+  .#{$p}min-h-0	{ min-height: 0; }
+  .#{$p}min-h-full	{ min-height: 100%; }
+  .#{$p}min-h-screen	{ min-height: 100vh; }
+}
+
+
+@mixin sizing_max_height($p: "") {
+  @each $name, $size in $height_sizing_sizes {
+    .#{$p}max-h-#{$name} { max-height: #{$size} }
+  }
+}

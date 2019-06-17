@@ -1,0 +1,96 @@
+@mixin layout_display($p: "") {
+  /***** DISPLAY ******/
+  .#{$p}block { display: block; }
+  .#{$p}inline-block { display: inline-block; }
+  .#{$p}inline { display: inline; }
+  .#{$p}flex { display: flex; }
+  .#{$p}inline-flex { display: inline-flex; }
+  .#{$p}table { display: table; }
+  .#{$p}table-row { display: table-row;  }
+  .#{$p}table-cell { display: table-cell; }
+  .#{$p}hidden { display: none; }
+}
+
+@mixin layout_float($p: "") {
+  .#{$p}float-right { float: right; }
+  .#{$p}float-left { float: left; }
+  .#{$p}float-none { float: none; }
+  .#{$p}clearfix:after { content: ""; display: table; clear: both; }
+}
+
+@mixin layout_object_fit($p: "") {
+  .#{$p}object-contain { -o-object-fit: contain; object-fit: contain}
+  .#{$p}object-cover { -o-object-fit: cover; object-fit: cover}
+  .#{$p}object-fill { -o-object-fit: fill; object-fit: fill}
+  .#{$p}object-none { -o-object-fit: none; object-fit: none}
+  .#{$p}object-scale-down { -o-object-fit: scale-down; object-fit: scale-down}
+}
+
+@mixin layout_object_position($p: "") {
+  .#{$p}object-bottom { -o-object-position: bottom; object-position: bottom}
+  .#{$p}object-center { -o-object-position: center; object-position: center}
+  .#{$p}object-left { -o-object-position: left; object-position: left}
+  .#{$p}object-left-bottom { -o-object-position: left bottom; object-position: left bottom}
+  .#{$p}object-left-top { -o-object-position: left top; object-position: left top}
+  .#{$p}object-right { -o-object-position: right; object-position: right}
+  .#{$p}object-right-bottom { -o-object-position: right bottom; object-position: right bottom}
+  .#{$p}object-right-top { -o-object-position: right top; object-position: right top}
+  .#{$p}object-top { -o-object-position: top; object-position: top}
+}
+
+@mixin layout_overflow($p: "") {
+  .#{$p}overflow-auto	{ overflow: auto; }
+  .#{$p}overflow-hidden	{ overflow: hidden; }
+  .#{$p}overflow-visible { overflow: visible; }
+  .#{$p}overflow-scroll	{ overflow: scroll; }
+  .#{$p}overflow-x-auto	{ overflow-x: auto; }
+  .#{$p}overflow-y-auto	{ overflow-y: auto; }
+  .#{$p}overflow-x-hidden	{ overflow-x: hidden; }
+  .#{$p}overflow-y-hidden	{ overflow-y: hidden; }
+  .#{$p}overflow-x-visible	{ overflow-x: visible; }
+  .#{$p}overflow-y-visible	{ overflow-y: visible; }
+  .#{$p}overflow-x-scroll	{ overflow-x: scroll; }
+  .#{$p}overflow-y-scroll	{ overflow-y: scroll; }
+  .#{$p}scrolling-touch	{ -webkit-overflow-scrolling: touch; }
+  .#{$p}scrolling-auto	{ -webkit-overflow-scrolling: auto; }
+}
+
+@mixin layout_position($p: "") {
+  .#{$p}static { position: static; }
+  .#{$p}fixed { position: fixed; }
+  .#{$p}absolute { position: absolute; }
+  .#{$p}relative { position: relative; }
+  .#{$p}sticky { position: -webkit-sticky; position: sticky; }
+}
+
+@mixin layout_top_right_bottom_left($p: "") {
+  .#{$p}inset-0 { top: 0; right: 0; bottom: 0; left: 0}
+  .#{$p}inset-auto { top: auto; right: auto; bottom: auto; left: auto}
+  .#{$p}inset-y-0 { top: 0; bottom: 0}
+  .#{$p}inset-x-0 { right: 0; left: 0}
+  .#{$p}inset-y-auto { top: auto; bottom: auto}
+  .#{$p}inset-x-auto { right: auto; left: auto}
+  .#{$p}top-0 { top: 0}
+  .#{$p}right-0 { right: 0}
+  .#{$p}bottom-0 { bottom: 0}
+  .#{$p}left-0 { left: 0}
+  .#{$p}top-auto { top: auto}
+  .#{$p}right-auto { right: auto}
+  .#{$p}bottom-auto { bottom: auto}
+  .#{$p}left-auto { left: auto}
+}
+
+@mixin layout_visibility($p: "") {
+  .#{$p}visible { visibility: visible; }
+  .#{$p}invisible { visibility: hidden; }
+}
+
+@mixin layout_z_index($p: "") {
+  .#{$p}z-0 { z-index: 0}
+  .#{$p}z-10 { z-index: 10}
+  .#{$p}z-20 { z-index: 20}
+  .#{$p}z-30 { z-index: 30}
+  .#{$p}z-40 { z-index: 40}
+  .#{$p}z-50 { z-index: 50}
+  .#{$p}z-auto { z-index: auto}
+}

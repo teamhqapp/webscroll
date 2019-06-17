@@ -1,0 +1,28 @@
+<% title "Article Details" %>
+<div class="center">
+  Created by <%= @article.author.name %>
+  <%= icon "fas", "circle", style: "font-size: 8px; top: -2px; position: relative;" %>
+  <% if @article.published? %>
+    Published on <%= local_time(@article.published_at) %>
+  <% else %>
+    Unpublished
+    <br/>
+    <%= link_to "Publish Article", publish_article_path(@article), method: :patch,
+      data: { confirm: "Are you sure?" }%>
+  <% end %>
+  <p class="text-gray-300 text-center">
+    <%= post_url @article.slug %> - <%= link_to "Visit", post_url(@article.slug) %>
+  </p>
+
+
+  <%= link_to edit_article_path(@article), class: "green-text" do %>
+    <%= icon "fas", "edit" %> Make Changes
+  <% end %>
+
+
+</div>
+
+<br/>
+<div class="webscroll">
+  <%= render "post/article", article: @article %>
+</div>

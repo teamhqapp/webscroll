@@ -1,0 +1,84 @@
+.webscroll {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23989bac' fill-opacity='0.14' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  padding-top: 30px;
+
+  border-top: #3f51b5 6px solid;
+  .logo { max-width: 768px; margin: 0px auto 30px; i { color: #1a237e; } font-weight: 900; a { color: hsl(0, 0%, 0%); }}
+
+  article {
+    max-width: 768px;
+    border-bottom: 2px dashed #1a237e;
+    margin: 20px auto 40px; padding-bottom: 60px;
+
+    .headline {
+      font-family: 'Roboto', 'Merriweather Sans', sans-serif;
+      font-weight: 300;
+      margin: 0;
+      font-size: 3rem;
+      line-height: 4rem;
+      text-align: left;
+      color: hsl(0, 0%, 0%);
+      a { color: hsl(0, 0%, 0%); }
+    }
+
+    .meta {
+      color: hsl(0, 0%, 0%);
+      font-family: 'Roboto', 'Merriweather Sans', sans-serif;
+      font-weight: 500;
+      margin-top: 0; font-size: 1.1rem;
+
+      i { font-size: 9px; position: relative; top: -1px; }
+    }
+
+    .content {
+      margin-top: 10px;
+
+
+      ul:not(.browser-default) >li {
+        list-style-type: disc; margin-left: 3rem; line-height: 2.5rem;
+      }
+
+      div, p, .trix-content {
+        line-height: 30px;
+        font-family: 'Roboto Slab','Merriweather', serif;
+        font-size: 20px;
+        color: hsl(0, 0%, 30%);
+
+        strong { font-weight: bold; color: #000; }
+
+        pre {
+          font-size: 0.8em;font-family: sans-serif; font-weight: 400;
+          border: 1px solid #deabcd; letter-spacing: 0.8px;
+        }
+      }
+
+      blockquote {
+        font-family: Georgia, serif;
+        font-size: 25px;
+        font-style: italic;
+        margin: 30px 0;
+
+      }
+    }
+
+
+
+    .trix-content{
+      img {
+        border: 2px solid #7986cb;
+        padding: 5px;
+        background: white;
+      }
+
+      .attachment-gallery {
+        margin: 30px 0;
+      }
+    }
+
+  }
+
+  footer {
+    max-width: 768px;
+  }
+}

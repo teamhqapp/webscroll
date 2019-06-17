@@ -1,0 +1,37 @@
+/** TYPOGRAPHY - TEXT mixins **/
+@mixin typography_text_align($p: "") {
+  .#{$p}text-left { text-align: left }
+  .#{$p}text-center { text-align: center }
+  .#{$p}text-right { text-align: right }
+  .#{$p}text-justify { text-align: justify }
+}
+
+@mixin typography_text_transform($p: "") {
+  .#{$p}uppercase { text-transform: uppercase }
+  .#{$p}lowercase { text-transform: lowercase }
+  .#{$p}capitalize { text-transform: capitalize }
+  .#{$p}normal-case { text-transform: none }
+}
+
+@mixin typography_text_decoration($p: "") {
+  .#{$p}underline { text-decoration: underline }
+  .#{$p}line-through { text-decoration: line-through }
+  .#{$p}no-underline { text-decoration: none }
+  .#{$p}hover\:underline:hover { text-decoration: underline }
+  .#{$p}hover\:line-through:hover { text-decoration: line-through }
+  .#{$p}hover\:no-underline:hover { text-decoration: none }
+  .#{$p}focus\:underline:focus { text-decoration: underline }
+  .#{$p}focus\:line-through:focus { text-decoration: line-through }
+  .#{$p}focus\:no-underline:focus { text-decoration: none}
+}
+
+@mixin typography_text_color($p: "") {
+  @each $color in $color_pallete {
+    @each $weight in $color_pallete_weights {
+
+      .#{$p}text-#{$color}-#{$weight} {  color: map-get($color_definitions, "#{$color}_#{$weight}"); }
+      .#{$p}hover\:text-#{$color}-#{$weight}:hover {  color: map-get($color_definitions, "#{$color}_#{$weight}"); }
+      .#{$p}focus\:text-#{$color}-#{$weight}:focus {  color: map-get($color_definitions, "#{$color}_#{$weight}"); }
+    }
+  }
+}

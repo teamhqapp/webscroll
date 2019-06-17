@@ -1,0 +1,24 @@
+@import "container";
+@import "responsive_mixins";
+
+// NON-MEDIA definitions
+@include layout_display;
+@include layout_float;
+@include layout_object_fit;
+@include layout_object_position;
+@include layout_overflow;
+@include layout_position;
+@include layout_top_right_bottom_left;
+@include layout_visibility;
+@include layout_z_index;
+
+// RUN PREFIX TRANSFORMATION ON MIXINS WITHIN @MEDIA CONTEXT
+@include prefix_responsive {
+  @include layout_display(#{$_breakpoint_prefix} );
+  @include layout_float(#{$_breakpoint_prefix} );
+  @include layout_overflow(#{$_breakpoint_prefix} );
+  @include layout_position(#{$_breakpoint_prefix} );
+  @include layout_visibility(#{$_breakpoint_prefix} );
+  @include layout_z_index(#{$_breakpoint_prefix} );
+
+}

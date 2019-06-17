@@ -1,0 +1,8 @@
+<% title "Editing Article" %>
+
+<%= render 'form', article: @article %>
+<div class="center">
+  <%= link_to @article, method: :delete, data: { confirm: 'Are you sure?' }, class: "grey-text" do %>
+    <%= icon "fas", "trash" %> Destroy Permanently?
+  <% end %>
+</div>

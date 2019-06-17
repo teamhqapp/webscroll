@@ -1,0 +1,25 @@
+@import "responsive_mixins";
+
+// NON-MEDIA definitions
+@include interactivity_appearance;
+@include interactivity_cursor;
+@include interactivity_outline;
+@include interactivity_pointer_events;
+@include interactivity_resize;
+@include interactivity_user_select;
+@include svg_fill;
+@include svg_stroke;
+
+// RUN PREFIX TRANSFORMATION ON MIXINS WITHIN @MEDIA CONTEXT
+@include prefix_responsive {
+  @include interactivity_appearance(#{$_breakpoint_prefix} );
+  @include interactivity_cursor(#{$_breakpoint_prefix} );
+  @include interactivity_outline(#{$_breakpoint_prefix} );
+  @include interactivity_pointer_events(#{$_breakpoint_prefix} );
+  @include interactivity_resize(#{$_breakpoint_prefix} );
+  @include interactivity_user_select(#{$_breakpoint_prefix} );
+  @include svg_fill(#{$_breakpoint_prefix} );
+  @include svg_stroke(#{$_breakpoint_prefix} );
+
+
+}

@@ -1,0 +1,11 @@
+@import "responsive_mixins";
+
+// NON-MEDIA definitions
+@include effects_box_shadow;
+@include effects_opacity;
+
+// RUN PREFIX TRANSFORMATION ON MIXINS WITHIN @MEDIA CONTEXT
+@include prefix_responsive {
+  @include effects_box_shadow(#{$_breakpoint_prefix} );
+  @include effects_opacity(#{$_breakpoint_prefix} );
+}

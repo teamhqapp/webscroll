@@ -1,0 +1,8 @@
+<%= simple_form_for @blog, url: blog_path, method: :patch do |f| %>
+  <%= f.input :name %>
+
+  <%= f.input :about_url %>
+  <%= f.input :terms_url %>
+  <%= f.input :copyright_text %>
+  <%= f.submit "Save", class: "btn green" %>
+<% end %>

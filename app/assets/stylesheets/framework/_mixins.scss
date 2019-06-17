@@ -1,0 +1,22 @@
+/** This mix in goes through the break points and assisng a breakpoint prefix
+ * that is then used by the @content (another mixin) to prepend the prefix to the
+ * css classes for different responive screens
+ *
+ */
+@mixin prefix_responsive {
+  @each $breakpoint_key, $breakpoint_val in $breakpoints {
+
+    @media (min-width: $breakpoint_val) {
+
+      $_breakpoint_prefix: "" !global;
+
+      @if (map-has-key($breakpoint_selectors, $breakpoint_key)) {
+        $_breakpoint_prefix: map-get($breakpoint_selectors, $breakpoint_key) !global;
+      }
+
+      @content;
+    }
+
+  }
+
+}

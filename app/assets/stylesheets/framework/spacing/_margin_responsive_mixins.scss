@@ -1,0 +1,24 @@
+@mixin spacing_margin($p: "") {
+
+  @each $name, $size in $spacing_sizes {
+    @include spacing_margin_full($p, $name, $size);
+    @include spacing_margin_xy($p, $name, $size);
+    @include spacing_margin_directions($p, $name, $size);
+
+  }
+}
+
+@mixin spacing_margin_full($p: "", $size_name: "", $size: "") {
+  .#{$p}m-#{$size_name} { margin: $size; }
+}
+
+@mixin spacing_margin_directions($p: "", $size_name: "", $size: "") {
+  @each $short_name, $long_name in $spacing_directions {
+    .#{$p}m#{$short_name}-#{$size_name} { margin-#{$long_name}: $size; }
+  }
+}
+
+@mixin spacing_margin_xy($p: "", $size_name: "", $size: "") {
+  .#{$p}my-#{$size_name} { margin-top: $size; margin-bottom: $size; }
+  .#{$p}mx-#{$size_name} { margin-left: $size; margin-right: $size; }
+}

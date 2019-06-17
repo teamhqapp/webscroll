@@ -1,0 +1,20 @@
+@mixin sizing_width($p: "") {
+    @each $name, $size in $width_fixed_sizes {
+      .#{$p}w-#{$name} { width: #{$size} }
+    }
+
+    @each $name, $size in $width_fluid_sizes {
+      .#{$p}w-#{$name} { width: #{$size} }
+    }
+
+}
+@mixin sizing_min_width($p: "") {
+  .#{$p}min-w-0	{ min-width: 0; }
+  .#{$p}min-w-full	{ min-width: 100%; }
+}
+
+@mixin sizing_max_width($p: "") {
+  @each $name, $size in $width_sizing_sizes {
+    .#{$p}max-w-#{$name} { max-width: #{$size} }
+  }
+}

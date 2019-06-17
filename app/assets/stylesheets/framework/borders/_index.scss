@@ -1,0 +1,17 @@
+@import "style_width_responsive_mixins";
+@import "rounded_responsive_mixins";
+@import "color_responsive_mixins";
+
+// NON-MEDIA definitions
+@include border_style;
+@include border_width;
+@include border_radius;
+@include border_color;
+
+// RUN PREFIX TRANSFORMATION ON MIXINS WITHIN @MEDIA CONTEXT
+@include prefix_responsive {
+  @include border_style(#{$_breakpoint_prefix} );
+  @include border_width(#{$_breakpoint_prefix} );
+  @include border_radius(#{$_breakpoint_prefix} );
+  @include border_color(#{$_breakpoint_prefix} );
+}

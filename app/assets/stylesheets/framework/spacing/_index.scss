@@ -1,0 +1,13 @@
+@import "padding_responsive_mixins";
+@import "margin_responsive_mixins";
+
+
+// NON-MEDIA definitions
+@include spacing_padding;
+@include spacing_margin;
+
+// RUN PREFIX TRANSFORMATION ON MIXINS WITHIN @MEDIA CONTEXT
+@include prefix_responsive {
+  @include spacing_padding(#{$_breakpoint_prefix} );
+  @include spacing_margin(#{$_breakpoint_prefix} );
+}

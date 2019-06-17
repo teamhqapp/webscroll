@@ -1,0 +1,29 @@
+<nav class="indigo">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">WebScroll</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><%= link_to root_path do %>
+            <%= icon "fas","scroll" %> Blog
+          <% end %>
+        </li>
+
+        <li><%= link_to new_article_path do %>
+            <%= icon "far","plus-square" %> New Article
+          <% end %>
+        </li>
+        <li><%= link_to articles_path do %>
+            <%= icon "fas","newspaper" %> Articles
+          <% end %>
+        </li>
+        <li><%= link_to edit_blog_path do %>
+            <%= icon "fas", "cogs" %> Settings
+          <% end %>
+        </li>
+        <li>
+          <%= link_to destroy_author_session_path, method: :delete do %>
+            <%= icon "fas", "sign-out-alt" %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </nav>

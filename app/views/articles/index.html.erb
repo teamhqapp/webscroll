@@ -1,0 +1,39 @@
+<% title "Blog Articles" %>
+<div class="center">
+  <%= link_to new_article_path, class: "green-text" do %>
+    <%= icon "fas", "plus" %> New Article
+  <% end %>
+</div>
+<h4>Draft Articles</h4>
+
+<table>
+  <tbody>
+    <% @draft_articles.each do |article| %>
+      <tr>
+        <td><%= link_to article.title, article %></td>
+        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% if @draft_articles.size == 0 %>
+<p>There are no draft articles</p>
+<% end %>
+
+<h4>Published Articles</h4>
+<table>
+  <tbody>
+    <% @published_articles.each do |article| %>
+      <tr>
+        <td><%= link_to article.title, article %></td>
+        <td><%= local_time article.published_at %></td>
+        <td><%= article.author.alias %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% if @published_articles.size == 0 %>
+<p>There are no published articles</p>
+<% end %>

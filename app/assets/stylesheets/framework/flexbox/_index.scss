@@ -1,0 +1,30 @@
+@import "responsive_mixins";
+@import "alignment_responsive_mixins";
+@import "order_responsive_mixins";
+
+// NON-MEDIA definitions
+@include flexbox_direction;
+@include flexbox_wrap;
+@include flexbox_align_items;
+@include flexbox_align_content;
+@include flexbox_align_self;
+@include flexbox_justify_content;
+@include flexbox_flex;
+@include flexbox_flex_grow_shrink;
+@include flexbox_order;
+
+
+
+// RUN PREFIX TRANSFORMATION ON MIXINS WITHIN @MEDIA CONTEXT
+@include prefix_responsive {  
+  @include flexbox_direction(#{$_breakpoint_prefix} );
+  @include flexbox_wrap(#{$_breakpoint_prefix} );
+  @include flexbox_align_items(#{$_breakpoint_prefix} );
+  @include flexbox_align_content(#{$_breakpoint_prefix} );
+  @include flexbox_align_self(#{$_breakpoint_prefix} );
+  @include flexbox_justify_content(#{$_breakpoint_prefix} );
+  @include flexbox_flex(#{$_breakpoint_prefix} );
+  @include flexbox_flex_grow_shrink(#{$_breakpoint_prefix} );
+  @include flexbox_order(#{$_breakpoint_prefix} );
+
+}

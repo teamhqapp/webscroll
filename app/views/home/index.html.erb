@@ -1,0 +1,11 @@
+<% title "#{blog_name}" %>
+
+<% @articles.each do |a| %>
+
+  <%= render "post/article", article: a %>
+
+<% end %>
+
+<% if @articles.size == 0 %>
+  <%= render "home/blank_slate" %>
+<% end %>

@@ -1,0 +1,17 @@
+<%= simple_form_for @article do |f| %>
+  <%= f.input :title, label: false, input_html: { placeholder: "Title"}  %>
+  <%= f.rich_text_area :content %>
+
+  <% if !@article.new_record?  %>
+    <p><%= f.input :slug, label: "Friendly URL Name", as: :string %></p>
+  <% end %>
+
+  <p>
+    <%= f.submit "Save Article", class: "btn green" %> or
+    <% if @article.new_record?  %>
+      <%= link_to "Cancel", @article %>
+    <% else %>
+      <%= link_to "Cancel", articles_path %>
+    <% end %>
+  </p>
+<% end %>

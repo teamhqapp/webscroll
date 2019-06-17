@@ -1,0 +1,21 @@
+@import "widths_responsive_mixins";
+@import "heights_responsive_mixins";
+
+
+// NON-MEDIA definitions
+@include sizing_width;
+@include sizing_min_width;
+@include sizing_max_width;
+@include sizing_height;
+@include sizing_min_height;
+@include sizing_max_height;
+
+// RUN PREFIX TRANSFORMATION ON MIXINS WITHIN @MEDIA CONTEXT
+@include prefix_responsive {
+  @include sizing_width(#{$_breakpoint_prefix} );
+  @include sizing_min_width(#{$_breakpoint_prefix} );
+  @include sizing_max_width(#{$_breakpoint_prefix} );
+  @include sizing_height(#{$_breakpoint_prefix} );
+  @include sizing_min_height(#{$_breakpoint_prefix} );
+  @include sizing_max_height(#{$_breakpoint_prefix} );
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebScroll</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="brown lighten-5">
+    <div class="container">
+
+
+      <% if author_signed_in? %>
+        <%= render partial: "layouts/admin_navbar" %>
+      <% else %>
+        <%= link_to "Sign In", new_author_session_path %>
+      <% end %>
+
+      <div class="card-panel">
+        <p id="notice"><%= notice %></p>
+        <% if content_for? :page_title %>
+          <h5 class="center"><%= yield :page_title %></h5>
+        <% end %>
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

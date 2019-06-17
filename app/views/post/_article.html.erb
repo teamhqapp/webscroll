@@ -1,0 +1,11 @@
+<article>
+  <h2 class="headline"><%= link_to article.title, post_path(article.slug) %></h2>
+  <p class="meta">
+    <%= article.author.alias %> <%= icon "far", "circle text-xs" %>
+    <%= article.published? ? local_time(article.published_at) : "Unpublished" %>
+  </p>
+
+  <div class="content">
+    <%= article.content %>
+  </div>
+</article>

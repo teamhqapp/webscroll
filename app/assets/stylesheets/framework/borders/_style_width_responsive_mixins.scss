@@ -1,0 +1,32 @@
+@mixin border_style($p: "") {
+  .#{$p}border-solid { border-style: solid }
+  .#{$p}border-dashed { border-style: dashed }
+  .#{$p}border-dotted { border-style: dotted }
+  .#{$p}border-none { border-style: none }
+
+}
+@mixin border_width($p: "") {
+  *,:after,:before{border:0 solid #e2e8f0}
+  .#{$p}border { border-width: $border_default_width; }
+  .#{$p}hover\:border:hover { border-width: $border_default_width; }
+  .#{$p}focus\:border:focus { border-width: $border_default_width; }
+
+  @each $name, $width in $border_widths {
+    .#{$p}border-#{$name} { border-width: #{$width}; }
+    .#{$p}hover\:border-#{$name}:hover { border-width: #{$width}; }
+    .#{$p}hover\:border-#{$name}:focus { border-width: #{$width}; }
+  }
+
+  @each $side_short, $side_long in $border_sides {
+    .#{$p}border-#{$side_short} { border-width: $border_default_width; }
+    .#{$p}hover\:border-#{$side_short}:hover { border-width: $border_default_width; }
+    .#{$p}focus\:border-#{$side_short}:focus { border-width: $border_default_width; }
+
+    @each $name, $width in $border_widths {
+      .#{$p}border-#{$side_short}-#{$name} { border-#{$side_long}-width: #{$width}; }
+      .#{$p}hover\:border-#{$side_short}-#{$name}:hover { border-#{$side_long}-width: #{$width}; }
+      .#{$p}hover\:border-#{$side_short}-#{$name}:focus { border-#{$side_long}-width: #{$width}; }
+    }
+  }
+
+}

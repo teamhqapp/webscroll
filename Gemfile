@@ -23,7 +23,7 @@ gem 'image_processing', '~> 1.2'
 
 ## TOOLS ##
 gem 'simple_form', "4.1.0"
-gem "devise", "4.6.2"
+gem "devise", "4.7.1"
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'local_time'
 

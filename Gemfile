@@ -17,7 +17,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'materialize-sass', '~> 1.0.0'
 
 gem "actiontext", require: "action_text"
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 
 
 
